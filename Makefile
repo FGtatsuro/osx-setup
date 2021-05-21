@@ -10,6 +10,7 @@ PACKAGES = \
 	 tmux \
 	 reattach-to-user-namespace
 
+.PHONY: install
 install:
 	for p in $(PACKAGES); do printf "$$p\n"; ./bin/wbrew $$p; done
 
