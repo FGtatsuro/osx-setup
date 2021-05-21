@@ -5,7 +5,8 @@ setup: install ~/.gitconfig
 PACKAGES = \
 	 git \
 	 gh \
-	 git-secrets
+	 git-secrets \
+	 peco
 
 install:
 	for p in $(PACKAGES); do printf "$$p\n"; ./bin/wbrew $$p; done
