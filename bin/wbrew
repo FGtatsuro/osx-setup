@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# FYI: https://linux.die.net/abs-guide/wrapper.html
+ARGS=1
+E_BADARGS=65
+
+function usage() {
+  echo "Usage: `basename $0` homebrew-package"
+  exit $1
+}
+
+if [ $# -ne "$ARGS" ]
+then
+  usage $E_BADARGS
+fi
+
+# TODO: support update
+if [ -n "`brew info $1 | grep 'Not installed'`" ]
+then
+  brew install $1
+fi
