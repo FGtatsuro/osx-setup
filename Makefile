@@ -15,7 +15,9 @@ BREW_PACKAGES = \
 	peco \
 	tmux \
 	reattach-to-user-namespace \
-	neovim
+	neovim \
+	php \
+	composer
 
 PIP_PACKAGES = \
 	pynvim
