@@ -9,6 +9,19 @@ Setup script for OSX
 
 ```bash
 $ make
+```
+
+## Manual setup
+
+Authentication for Github CLI
+
+```bash
 $ gh auth login
 ```
 
+Registration for Neovim plugins
+
+```vim
+$ nvim
+:UpdateRemotePlugins
+```

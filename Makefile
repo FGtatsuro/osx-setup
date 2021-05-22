@@ -1,21 +1,29 @@
 all: setup
 
-setup: install ~/.gitconfig ~/.tmux.conf
-
-PACKAGES = \
-	 git \
-	 gh \
-	 git-secrets \
-	 peco \
-	 tmux \
-	 reattach-to-user-namespace
+setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim
 
 /usr/local/bin/brew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+/usr/local/bin/python3:
+	brew install python
+
+BREW_PACKAGES = \
+	git \
+	gh \
+	git-secrets \
+	peco \
+	tmux \
+	reattach-to-user-namespace \
+	neovim
+
+PIP_PACKAGES = \
+	pynvim
+
 .PHONY: install
-install: /usr/local/bin/brew
-	for p in $(PACKAGES); do printf "$$p\n"; ./bin/wbrew $$p; done
+install: /usr/local/bin/brew /usr/local/bin/python3
+	for p in $(BREW_PACKAGES); do printf "$$p\n"; ./bin/wbrew $$p; done
+	/usr/local/bin/pip3 install $(PIP_PACKAGES)
 
 ~/.gitconfig:
 	git config --global user.email 204491+FGtatsuro@users.noreply.github.com
@@ -26,3 +34,9 @@ install: /usr/local/bin/brew
 
 ~/.tmux.conf:
 	cp home/.tmux.conf ~/.tmux.conf
+
+~/.config:
+	mkdir -p ~/.config
+
+~/.config/nvim/init.vim: ~/.config
+	cp -R home/.config/nvim ~/.config/
