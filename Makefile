@@ -10,8 +10,11 @@ PACKAGES = \
 	 tmux \
 	 reattach-to-user-namespace
 
+/usr/local/bin/brew:
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 .PHONY: install
-install:
+install: /usr/local/bin/brew
 	for p in $(PACKAGES); do printf "$$p\n"; ./bin/wbrew $$p; done
 
 ~/.gitconfig:
