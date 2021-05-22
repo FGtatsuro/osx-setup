@@ -1,6 +1,6 @@
 all: setup
 
-setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim
+setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim ~/.zshrc
 
 /usr/local/bin/brew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -40,3 +40,7 @@ install: /usr/local/bin/brew /usr/local/bin/python3
 
 ~/.config/nvim/init.vim: ~/.config
 	cp -R home/.config/nvim ~/.config/
+
+~/.zshrc:
+	chsh -s /bin/zsh
+	cp home/.zshrc ~/.zshrc
