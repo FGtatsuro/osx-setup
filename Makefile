@@ -1,6 +1,6 @@
 all: setup
 
-setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim ~/.zshrc
+setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim ~/.zshrc ~/.ipython/profile_default/ipython_config.py
 
 /usr/local/bin/brew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -20,7 +20,8 @@ BREW_PACKAGES = \
 	composer
 
 PIP_PACKAGES = \
-	pynvim
+	pynvim \
+	ipython
 
 .PHONY: install
 install: /usr/local/bin/brew /usr/local/bin/python3
@@ -46,3 +47,7 @@ install: /usr/local/bin/brew /usr/local/bin/python3
 ~/.zshrc:
 	chsh -s /bin/zsh
 	cp home/.zshrc ~/.zshrc
+
+~/.ipython/profile_default/ipython_config.py:
+	mkdir -p ~/.ipython/profile_default
+	cp home/.ipython/profile_default/ipython_config.py ~/.ipython/profile_default/ipython_config.py
