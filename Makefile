@@ -17,7 +17,8 @@ BREW_PACKAGES = \
 	reattach-to-user-namespace \
 	neovim \
 	php \
-	composer
+	composer \
+	terraform
 
 PIP_PACKAGES = \
 	pynvim \
