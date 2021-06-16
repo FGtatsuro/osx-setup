@@ -1,11 +1,12 @@
 #!/bin/bash
+set -eu
 
 # FYI: https://linux.die.net/abs-guide/wrapper.html
 ARGS=1
 E_BADARGS=65
 
 function usage() {
-  echo "Usage: `basename $0` homebrew-package"
+  echo "Usage: `basename $0` \"homebrew-packages\""
   exit $1
 }
 
@@ -14,8 +15,7 @@ then
   usage $E_BADARGS
 fi
 
-# TODO: support update
-if [ -n "`brew info $1 | grep 'Not installed'`" ]
-then
-  brew install $1
-fi
+. `dirname $0`/setop
+
+installed=`brew list`
+diffset "$@" "${installed}" | xargs brew install
