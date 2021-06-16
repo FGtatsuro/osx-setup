@@ -1,0 +1,7 @@
+#!/bin/bash
+set -eu
+
+# FYI: https://qiita.com/a_atsushi/items/72f4039038d67950f0f7
+function diffset() {
+  (printf "%s\n" $@ | sort -u; printf "%s\n" $2) | sort | uniq -u
+}

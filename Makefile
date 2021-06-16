@@ -26,7 +26,7 @@ PIP_PACKAGES = \
 
 .PHONY: install
 install: /usr/local/bin/brew /usr/local/bin/python3
-	for p in $(BREW_PACKAGES); do printf "$$p\n"; ./bin/wbrew $$p; done
+	./bin/wbrew "$(BREW_PACKAGES)"
 	/usr/local/bin/pip3 install $(PIP_PACKAGES)
 
 ~/.gitconfig:
