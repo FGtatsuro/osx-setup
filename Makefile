@@ -1,11 +1,15 @@
+BREW_PREFIX := /usr/local
+
 all: setup
 
 setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim ~/.zshrc ~/.ipython/profile_default/ipython_config.py
 
-/usr/local/bin/brew:
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+$(BREW_PREFIX)/bin/brew:
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	cp home/.zprofile ~/.zprofile
+	source ~/.zprofile
 
-/usr/local/bin/python3:
+$(BREW_PREFIX)/bin/python3:
 	brew install python
 
 BREW_PACKAGES = \
@@ -26,9 +30,9 @@ PIP_PACKAGES = \
 	ipython
 
 .PHONY: install
-install: /usr/local/bin/brew /usr/local/bin/python3
+install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
 	./bin/wbrew "$(BREW_PACKAGES)"
-	/usr/local/bin/pip3 install $(PIP_PACKAGES)
+	$(BREW_PREFIX)/bin/pip3 install $(PIP_PACKAGES)
 
 ~/.gitconfig:
 	git config --global user.email 204491+FGtatsuro@users.noreply.github.com
