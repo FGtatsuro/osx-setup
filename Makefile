@@ -8,6 +8,7 @@ $(BREW_PREFIX)/bin/brew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	cp home/.zprofile ~/.zprofile
 	source ~/.zprofile
+	brew tap homebrew/cask-fonts
 
 $(BREW_PREFIX)/bin/python3:
 	brew install python
@@ -25,7 +26,8 @@ BREW_PACKAGES = \
 	terraform \
 	awscli \
 	aquaskk \
-	karabiner-elements
+	karabiner-elements \
+	font-ricty-diminished
 
 PIP_PACKAGES = \
 	pynvim \
