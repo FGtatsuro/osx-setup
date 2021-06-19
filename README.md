@@ -26,6 +26,13 @@ $ gh auth login
 $ aws configure
 ```
 
+Docker must be installed via cask
+
+```bash
+$ brew install --cask docker
+$ open /Applications/Docker.app
+```
+
 Registration for Neovim plugins
 
 ```vim
