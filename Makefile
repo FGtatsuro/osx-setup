@@ -27,7 +27,8 @@ BREW_PACKAGES = \
 	awscli \
 	aquaskk \
 	karabiner-elements \
-	font-ricty-diminished
+	font-ricty-diminished \
+	visual-studio-code
 
 PIP_PACKAGES = \
 	pynvim \
