@@ -23,7 +23,8 @@ BREW_PACKAGES = \
 	php \
 	composer \
 	terraform \
-	awscli
+	awscli \
+	aquaskk
 
 PIP_PACKAGES = \
 	pynvim \
