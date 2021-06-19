@@ -2,6 +2,10 @@ if [ $SHLVL = 1 ]; then
   tmux attach || tmux
 fi
 
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+autoload -U compinit
+compinit
+
 export HISTSIZE=100000
 export SAVEHIST=100000
 # FYI:
