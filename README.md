@@ -9,6 +9,9 @@ Setup script for OSX
 
 ```bash
 $ make
+
+# For M1 Mac
+$ make BREW_PREFIX=/opt/homebrew
 ```
 
 ## Manual setup
