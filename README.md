@@ -13,10 +13,14 @@ $ make
 
 ## Manual setup
 
-Authentication for Github CLI
+Authentication for several CLI tools
 
 ```bash
+# Github
 $ gh auth login
+
+# AWS: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
+$ aws configure
 ```
 
 Registration for Neovim plugins

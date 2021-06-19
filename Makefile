@@ -18,7 +18,8 @@ BREW_PACKAGES = \
 	neovim \
 	php \
 	composer \
-	terraform
+	terraform \
+	awscli
 
 PIP_PACKAGES = \
 	pynvim \
