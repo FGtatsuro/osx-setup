@@ -9,7 +9,8 @@ set fileencoding=utf-8
 set fileencodings=utf-8,cp932
 set completeopt=menuone,preview,noselect
 
-let g:python3_host_prog = '/usr/local/bin/python3'
+let brew_prefix = system("brew --prefix | tr -d '\n'")
+let g:python3_host_prog = brew_prefix.'/bin/python3'
 " For https://github.com/FGtatsuro/github.nvim
 let &runtimepath.=','.$HOME.'/.config/nvim/bundle/github.nvim'
 
