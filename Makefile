@@ -4,6 +4,8 @@ setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim ~/.zshrc ~/.ipy
 
 /usr/local/bin/brew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	cp home/.zprofile ~/.zprofile
+	source ~/.zprofile
 
 /usr/local/bin/python3:
 	brew install python
