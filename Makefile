@@ -29,7 +29,8 @@ BREW_PACKAGES = \
 	karabiner-elements \
 	font-ricty-diminished \
 	visual-studio-code \
-	go
+	go \
+	google-cloud-sdk
 
 PIP_PACKAGES = \
 	pynvim \
