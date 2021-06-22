@@ -4,6 +4,14 @@ all: setup
 
 setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim ~/.config/karabiner/assets/complex_modifications/ctrl_m.json ~/.zshrc ~/.ipython/profile_default/ipython_config.py
 
+diff:
+	diff home/.zprofile ~/.zprofile
+	diff home/.zshrc ~/.zshrc
+	diff home/.tmux.conf ~/.tmux.conf
+	diff -r home/.config/nvim ~/.config/nvim -x .netrwhist -x __pycache__
+	diff -r home/.config/karabiner/assets/complex_modifications ~/.config/karabiner/assets/complex_modifications
+	diff home/.ipython/profile_default/ipython_config.py ~/.ipython/profile_default/ipython_config.py
+
 $(BREW_PREFIX)/bin/brew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	cp home/.zprofile ~/.zprofile
