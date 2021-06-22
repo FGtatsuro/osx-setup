@@ -30,7 +30,8 @@ BREW_PACKAGES = \
 	font-ricty-diminished \
 	visual-studio-code \
 	go \
-	google-cloud-sdk
+	google-cloud-sdk \
+	jq
 
 PIP_PACKAGES = \
 	pynvim \
