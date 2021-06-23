@@ -28,17 +28,16 @@ BREW_PACKAGES = \
 	peco \
 	tmux \
 	reattach-to-user-namespace \
-	neovim \
-	php \
-	composer \
-	terraform \
-	awscli \
 	aquaskk \
 	karabiner-elements \
 	font-ricty-diminished \
+	neovim \
 	visual-studio-code \
-	go \
+	terraform \
+	awscli \
 	google-cloud-sdk \
+	php composer \
+	go \
 	jq \
 	postman
 
