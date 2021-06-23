@@ -40,7 +40,8 @@ BREW_PACKAGES = \
 	go \
 	goenv \
 	jq \
-	postman
+	postman \
+	mysqlworkbench
 
 PIP_PACKAGES = \
 	pynvim \
