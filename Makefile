@@ -33,7 +33,7 @@ BREW_PACKAGES = \
 	font-ricty-diminished \
 	neovim \
 	visual-studio-code \
-	terraform \
+	tfenv \
 	awscli \
 	google-cloud-sdk \
 	php composer \
@@ -50,6 +50,8 @@ PIP_PACKAGES = \
 install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
 	./bin/wbrew "$(BREW_PACKAGES)"
 	$(BREW_PREFIX)/bin/pip3 install $(PIP_PACKAGES)
+	tfenv install latest
+	tfenv use latest
 
 ~/.gitconfig:
 	git config --global user.email 204491+FGtatsuro@users.noreply.github.com
