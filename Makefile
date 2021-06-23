@@ -39,7 +39,8 @@ BREW_PACKAGES = \
 	visual-studio-code \
 	go \
 	google-cloud-sdk \
-	jq
+	jq \
+	postman
 
 PIP_PACKAGES = \
 	pynvim \
