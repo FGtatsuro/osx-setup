@@ -38,6 +38,7 @@ BREW_PACKAGES = \
 	google-cloud-sdk \
 	php composer \
 	go \
+	goenv \
 	jq \
 	postman
 
