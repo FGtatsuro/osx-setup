@@ -36,7 +36,8 @@ BREW_PACKAGES = \
 	tfenv \
 	awscli \
 	google-cloud-sdk \
-	php composer \
+	php \
+	composer \
 	go \
 	goenv \
 	jq \
