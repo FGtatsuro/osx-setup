@@ -5,7 +5,7 @@ all: setup
 setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim ~/.config/karabiner/assets/complex_modifications/ctrl_m.json ~/.zshrc ~/.ipython/profile_default/ipython_config.py
 
 diff:
-	diff home/.zprofile ~/.zprofile
+	diff home/.zprofile ~/.zprofile -I "brew shellenv"
 	diff home/.zshrc ~/.zshrc
 	diff home/.tmux.conf ~/.tmux.conf
 	diff -r home/.config/nvim ~/.config/nvim -x .netrwhist -x __pycache__
