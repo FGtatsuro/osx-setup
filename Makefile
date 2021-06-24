@@ -40,6 +40,7 @@ BREW_PACKAGES = \
 	composer \
 	go \
 	goenv \
+	node \
 	jq \
 	postman \
 	mysqlworkbench
