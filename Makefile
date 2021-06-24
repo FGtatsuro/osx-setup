@@ -53,8 +53,10 @@ PIP_PACKAGES = \
 install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
 	./bin/wbrew "$(BREW_PACKAGES)"
 	$(BREW_PREFIX)/bin/pip3 install $(PIP_PACKAGES)
-	tfenv install latest
-	tfenv use latest
+	if [ ! -e "$(BREW_PREFIX)/bin/terraform" ]; then \
+		tfenv install latest; \
+		tfenv use latest; \
+	fi
 
 ~/.gitconfig:
 	git config --global user.email 204491+FGtatsuro@users.noreply.github.com
