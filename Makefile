@@ -41,6 +41,7 @@ BREW_PACKAGES = \
 	go \
 	goenv \
 	node \
+	serverless \
 	jq \
 	postman \
 	mysqlworkbench
