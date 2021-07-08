@@ -44,7 +44,8 @@ BREW_PACKAGES = \
 	serverless \
 	jq \
 	postman \
-	mysqlworkbench
+	mysqlworkbench \
+	authy
 
 PIP_PACKAGES = \
 	pynvim \
