@@ -35,6 +35,7 @@ BREW_PACKAGES = \
 	visual-studio-code \
 	tfenv \
 	awscli \
+	aws-vault \
 	google-cloud-sdk \
 	php \
 	composer \
