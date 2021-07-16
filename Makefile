@@ -50,7 +50,8 @@ BREW_PACKAGES = \
 
 PIP_PACKAGES = \
 	pynvim \
-	ipython
+	ipython \
+	notebook
 
 .PHONY: install
 install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
