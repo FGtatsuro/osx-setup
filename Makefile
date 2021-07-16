@@ -46,7 +46,8 @@ BREW_PACKAGES = \
 	jq \
 	postman \
 	mysqlworkbench \
-	authy
+	authy \
+	discord
 
 PIP_PACKAGES = \
 	pynvim \
