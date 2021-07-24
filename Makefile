@@ -54,10 +54,14 @@ PIP_PACKAGES = \
 	ipython \
 	notebook
 
+NPM_PACKAGES = \
+	ts-node
+
 .PHONY: install
 install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
 	./bin/wbrew "$(BREW_PACKAGES)"
 	$(BREW_PREFIX)/bin/pip3 install $(PIP_PACKAGES)
+	$(BREW_PREFIX)/bin/npm install -g ts-node
 	if [ ! -e "$(BREW_PREFIX)/bin/terraform" ]; then \
 		tfenv install latest; \
 		tfenv use latest; \
