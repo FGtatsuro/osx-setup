@@ -45,6 +45,7 @@ BREW_PACKAGES = \
 	serverless \
 	jq \
 	postman \
+	mysql \
 	mysqlworkbench \
 	authy \
 	discord
