@@ -26,6 +26,7 @@ BREW_PACKAGES = \
 	gh \
 	git-secrets \
 	peco \
+	parallel \
 	tmux \
 	reattach-to-user-namespace \
 	aquaskk \
