@@ -36,6 +36,7 @@ BREW_PACKAGES = \
 	tfenv \
 	awscli \
 	aws-vault \
+	session-manager-plugin \
 	google-cloud-sdk \
 	php \
 	composer \
