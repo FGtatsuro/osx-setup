@@ -52,7 +52,8 @@ BREW_PACKAGES = \
 	mysqlworkbench \
 	authy \
 	discord \
-	imagemagick
+	imagemagick \
+	skitch
 
 PIP_PACKAGES = \
 	pynvim \
