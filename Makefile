@@ -58,7 +58,8 @@ BREW_PACKAGES = \
 PIP_PACKAGES = \
 	pynvim \
 	ipython \
-	notebook
+	notebook \
+	sqlfluff
 
 NPM_PACKAGES = \
 	ts-node
