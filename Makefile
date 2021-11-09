@@ -53,7 +53,8 @@ BREW_PACKAGES = \
 	authy \
 	discord \
 	imagemagick \
-	skitch
+	skitch \
+	tunnelblick
 
 PIP_PACKAGES = \
 	pynvim \
