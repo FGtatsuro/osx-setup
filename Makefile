@@ -30,6 +30,7 @@ BREW_PACKAGES = \
 	autossh \
 	tmux \
 	reattach-to-user-namespace \
+	tree \
 	aquaskk \
 	karabiner-elements \
 	font-ricty-diminished \
