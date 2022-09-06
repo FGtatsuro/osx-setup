@@ -41,3 +41,9 @@ Registration for Neovim plugins
 $ nvim
 :UpdateRemotePlugins
 ```
+
+[Earthly](https://docs.earthly.dev)
+
+```bash
+$ earthly bootstrap
+```

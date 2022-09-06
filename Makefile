@@ -26,6 +26,7 @@ BREW_PACKAGES = \
 	gh \
 	git-secrets \
 	peco \
+	earthly/earthly/earthly \
 	parallel \
 	autossh \
 	tmux \
