@@ -47,3 +47,10 @@ $ nvim
 ```bash
 $ earthly bootstrap
 ```
+
+[Awsume](https://awsu.me) and [Awsume Console Plugin](https://github.com/trek10inc/awsume-console-plugin)
+
+```bash
+$ awsume-configure
+$ awsume --config set console.browser_command "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" -incognito \"{url}\""
+```

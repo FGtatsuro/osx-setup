@@ -63,7 +63,9 @@ PIP_PACKAGES = \
 	pynvim \
 	ipython \
 	notebook \
-	sqlfluff
+	sqlfluff \
+	awsume \
+	awsume-console-plugin
 
 NPM_PACKAGES = \
 	ts-node
