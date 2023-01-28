@@ -58,7 +58,8 @@ BREW_PACKAGES = \
 	imagemagick \
 	skitch \
 	tunnelblick \
-	awsume
+	awsume \
+	aws-sso-util
 
 PIP_PACKAGES = \
 	pynvim \
