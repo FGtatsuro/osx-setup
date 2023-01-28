@@ -57,14 +57,14 @@ BREW_PACKAGES = \
 	discord \
 	imagemagick \
 	skitch \
-	tunnelblick
+	tunnelblick \
+	awsume
 
 PIP_PACKAGES = \
 	pynvim \
 	ipython \
 	notebook \
 	sqlfluff \
-	awsume \
 	awsume-console-plugin
 
 NPM_PACKAGES = \
