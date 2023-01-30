@@ -54,3 +54,17 @@ $ earthly bootstrap
 $ awsume-configure
 $ awsume --config set console.browser_command "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" -incognito \"{url}\""
 ```
+
+[Amazon ECR Docker Credential Helper](https://github.com/awslabs/amazon-ecr-credential-helper)
+
+```bash
+$ cat ~/.docker/config.json
+{
+...
+        "credHelpers": {
+                "xxxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com": "ecr-login",
+                "public.ecr.aws": "ecr-login"
+        },
+...
+}
+```
