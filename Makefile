@@ -59,7 +59,8 @@ BREW_PACKAGES = \
 	skitch \
 	tunnelblick \
 	awsume \
-	aws-sso-util
+	aws-sso-util \
+	docker-credential-helper-ecr
 
 PIP_PACKAGES = \
 	pynvim \
