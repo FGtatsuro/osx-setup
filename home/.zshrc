@@ -35,3 +35,6 @@ if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/comp
 
 # Golang
 export PATH=$HOME/go/bin:$PATH
+
+# Java
+export PATH=$(brew --prefix)/opt/openjdk/bin:$PATH
