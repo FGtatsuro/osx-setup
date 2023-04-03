@@ -38,3 +38,6 @@ export PATH=$HOME/go/bin:$PATH
 
 # Java
 export PATH=$(brew --prefix)/opt/openjdk/bin:$PATH
+
+# Kubernetes
+source <(kubectl completion zsh)
