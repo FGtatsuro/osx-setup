@@ -60,7 +60,8 @@ BREW_PACKAGES = \
 	tunnelblick \
 	awsume \
 	aws-sso-util \
-	docker-credential-helper-ecr
+	docker-credential-helper-ecr \
+	kubectx
 
 PIP_PACKAGES = \
 	pynvim \
