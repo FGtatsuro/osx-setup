@@ -72,11 +72,15 @@ PIP_PACKAGES = \
 NPM_PACKAGES = \
 	ts-node
 
+GCLOUD_COMPONENTS = \
+	gke-gcloud-auth-plugin
+
 .PHONY: install
 install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
 	./bin/wbrew "$(BREW_PACKAGES)"
 	$(BREW_PREFIX)/bin/pip3 install $(PIP_PACKAGES)
 	$(BREW_PREFIX)/bin/npm install -g ts-node
+	$(BREW_PREFIX)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gcloud components install --quiet $(GCLOUD_COMPONENTS)
 
 ~/.gitconfig:
 	git config --global user.email 204491+FGtatsuro@users.noreply.github.com
