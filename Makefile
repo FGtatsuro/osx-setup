@@ -37,7 +37,6 @@ BREW_PACKAGES = \
 	font-ricty-diminished \
 	neovim \
 	visual-studio-code \
-	tfenv \
 	awscli \
 	aws-vault \
 	session-manager-plugin \
@@ -45,7 +44,6 @@ BREW_PACKAGES = \
 	php \
 	composer \
 	go \
-	goenv \
 	gotags \
 	node \
 	serverless \
@@ -61,7 +59,8 @@ BREW_PACKAGES = \
 	awsume \
 	aws-sso-util \
 	docker-credential-helper-ecr \
-	kubectx
+	kubectx \
+	asdf
 
 PIP_PACKAGES = \
 	pynvim \
@@ -78,10 +77,6 @@ install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
 	./bin/wbrew "$(BREW_PACKAGES)"
 	$(BREW_PREFIX)/bin/pip3 install $(PIP_PACKAGES)
 	$(BREW_PREFIX)/bin/npm install -g ts-node
-	if [ ! -e "$(BREW_PREFIX)/bin/terraform" ]; then \
-		tfenv install latest; \
-		tfenv use latest; \
-	fi
 
 ~/.gitconfig:
 	git config --global user.email 204491+FGtatsuro@users.noreply.github.com
