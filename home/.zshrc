@@ -41,3 +41,6 @@ export PATH=$(brew --prefix)/opt/openjdk/bin:$PATH
 
 # Kubernetes
 source <(kubectl completion zsh)
+
+# asdf
+source $(brew --prefix asdf)/libexec/asdf.sh
