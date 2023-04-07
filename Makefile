@@ -61,6 +61,7 @@ BREW_PACKAGES = \
 	docker-credential-helper-ecr \
 	kubectx \
 	krew \
+	tektoncd-cli \
 	asdf
 
 PIP_PACKAGES = \
