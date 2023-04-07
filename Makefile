@@ -60,6 +60,7 @@ BREW_PACKAGES = \
 	aws-sso-util \
 	docker-credential-helper-ecr \
 	kubectx \
+	krew \
 	asdf
 
 PIP_PACKAGES = \
@@ -75,12 +76,17 @@ NPM_PACKAGES = \
 GCLOUD_COMPONENTS = \
 	gke-gcloud-auth-plugin
 
+KUBECTL_PLUGINS = \
+	stern \
+	view-allocations
+
 .PHONY: install
 install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
 	./bin/wbrew "$(BREW_PACKAGES)"
 	$(BREW_PREFIX)/bin/pip3 install $(PIP_PACKAGES)
 	$(BREW_PREFIX)/bin/npm install -g $(NPM_PACKAGES)
 	$(BREW_PREFIX)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gcloud components install --quiet $(GCLOUD_COMPONENTS)
+	$(BREW_PREFIX)/bin/kubectl krew install $(KUBECTL_PLUGINS)
 
 ~/.gitconfig:
 	git config --global user.email 204491+FGtatsuro@users.noreply.github.com
