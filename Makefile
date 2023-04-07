@@ -80,6 +80,13 @@ KUBECTL_PLUGINS = \
 	stern \
 	view-allocations
 
+ASDF_PLUGINS = \
+	terraform \
+	kustomize
+
+# NOTE: asdf CLI limitationNOTE
+# - asdf returns non-zero exit code when it tries to install already installed ones.
+# - 'asdf plugin add' doesn't support multiple plugins like 'asdf plugin add p1 p2'.
 .PHONY: install
 install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
 	./bin/wbrew "$(BREW_PACKAGES)"
@@ -87,6 +94,7 @@ install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
 	$(BREW_PREFIX)/bin/npm install -g $(NPM_PACKAGES)
 	$(BREW_PREFIX)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gcloud components install --quiet $(GCLOUD_COMPONENTS)
 	$(BREW_PREFIX)/bin/kubectl krew install $(KUBECTL_PLUGINS)
+	for p in $(ASDF_PLUGINS); do $(BREW_PREFIX)/bin/asdf plugin add $$p || :; $(BREW_PREFIX)/bin/asdf install $$p latest && $(BREW_PREFIX)/bin/asdf global $$p latest; done
 
 ~/.gitconfig:
 	git config --global user.email 204491+FGtatsuro@users.noreply.github.com
