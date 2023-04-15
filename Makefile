@@ -61,7 +61,9 @@ BREW_PACKAGES = \
 	kubectx \
 	krew \
 	tektoncd-cli \
-	asdf
+	asdf \
+	google-chrome \
+	vivaldi
 
 PIP_PACKAGES = \
 	pynvim \
