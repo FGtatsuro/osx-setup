@@ -12,11 +12,10 @@ diff:
 	diff -r home/.config/karabiner/assets/complex_modifications ~/.config/karabiner/assets/complex_modifications
 	diff home/.ipython/profile_default/ipython_config.py ~/.ipython/profile_default/ipython_config.py
 
-$(BREW_PREFIX)/bin/brew:
+.PHONY: brew-install
+brew-install:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	cp home/.zprofile ~/.zprofile
-	source ~/.zprofile
-	brew tap homebrew/cask-fonts
 
 $(BREW_PREFIX)/bin/python3:
 	brew install python
@@ -90,7 +89,8 @@ ASDF_PLUGINS = \
 # - asdf returns non-zero exit code when it tries to install already installed ones.
 # - 'asdf plugin add' doesn't support multiple plugins like 'asdf plugin add p1 p2'.
 .PHONY: install
-install: $(BREW_PREFIX)/bin/brew $(BREW_PREFIX)/bin/python3
+install: $(BREW_PREFIX)/bin/python3
+	brew tap homebrew/cask-fonts
 	./bin/wbrew "$(BREW_PACKAGES)"
 	$(BREW_PREFIX)/bin/pip3 install $(PIP_PACKAGES)
 	$(BREW_PREFIX)/bin/npm install -g $(NPM_PACKAGES)

@@ -8,9 +8,11 @@ Setup script for OSX
 ## Setup
 
 ```bash
-$ make
+$ make brew-install # This Task is executed only once
+$ make # Execute on New terminal
 
 # For M1 Mac
+$ make brew-install BREW_PREFIX=/opt/homebrew
 $ make BREW_PREFIX=/opt/homebrew
 ```
 
