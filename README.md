@@ -70,3 +70,31 @@ $ cat ~/.docker/config.json
 ...
 }
 ```
+
+## Other manual settings
+
+Following manual settings are needed after script execution.
+
+- Trackpad
+   - 一本指でクリック
+   - 三本指でドラッグ
+- Keyboard
+   - キーリピート速度(最速)
+   - 修飾キーの変更(CapsLock->Ctrl)
+   - 標準のファンクションキーの使用
+- Desktop
+   - ホットコーナー
+   - Dock
+- Terminal
+   - プロファイル
+      - Homebrew
+   - テキスト
+      - フォント(Ricty Diminished Discord Regular: 16)
+   - ウインドウ
+      - ウインドウサイズ(178 x 46)
+   - シェル
+      -シェルの終了時にウインドウを閉じる
+   - キーボード
+      - メタキーとしてOptionキーを使用
+   - 詳細
+      - オーディオベルの停止
