@@ -34,7 +34,8 @@ if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path
 if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then . "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"; fi
 
 # Golang
-export PATH=$HOME/go/bin:$PATH
+export GOBIN=$HOME/go/bin
+export PATH=$GOBIN:$PATH
 
 # Java
 export PATH=$(brew --prefix)/opt/openjdk/bin:$PATH
