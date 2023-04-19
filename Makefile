@@ -85,7 +85,8 @@ KUBECTL_PLUGINS = \
 ASDF_PLUGINS = \
 	terraform \
 	kustomize \
-	golang
+	golang \
+	ruby
 
 # NOTE: asdf CLI limitationNOTE
 # - asdf returns non-zero exit code when it tries to install already installed ones.
