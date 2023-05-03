@@ -77,6 +77,15 @@ $ cat ~/.docker/config.json
 $ sudo softwareupdate --install-rosetta --agree-to-license
 ```
 
+Xcode
+
+```
+# Directory path is different depending on the version you install via xcodes.
+$ sudo xcode-select --switch /Applications/Xcode-14.3.0.app/Contents/Developer
+$ sudo xcodebuild -runFirstLaunch
+```
+
+
 ## Other manual settings
 
 Following manual settings are needed after script execution.

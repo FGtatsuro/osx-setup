@@ -63,7 +63,8 @@ BREW_PACKAGES = \
 	tektoncd-cli \
 	asdf \
 	google-chrome \
-	vivaldi
+	vivaldi \
+	xcodes
 
 PIP_PACKAGES = \
 	pynvim \
@@ -101,6 +102,7 @@ install: $(BREW_PREFIX)/bin/python3
 	$(BREW_PREFIX)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gcloud components install --quiet $(GCLOUD_COMPONENTS)
 	$(BREW_PREFIX)/bin/kubectl krew install $(KUBECTL_PLUGINS)
 	for p in $(ASDF_PLUGINS); do $(BREW_PREFIX)/bin/asdf plugin add $$p || :; $(BREW_PREFIX)/bin/asdf install $$p latest && $(BREW_PREFIX)/bin/asdf global $$p latest; done
+	xcodes install --latest
 
 ~/.gitconfig:
 	git config --global user.email 204491+FGtatsuro@users.noreply.github.com
