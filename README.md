@@ -71,6 +71,12 @@ $ cat ~/.docker/config.json
 }
 ```
 
+[Flutter](https://docs.flutter.dev/get-started/install/macos)
+
+```bash
+$ sudo softwareupdate --install-rosetta --agree-to-license
+```
+
 ## Other manual settings
 
 Following manual settings are needed after script execution.
