@@ -83,8 +83,12 @@ Xcode
 # Directory path is different depending on the version you install via xcodes.
 $ sudo xcode-select --switch /Applications/Xcode-14.3.0.app/Contents/Developer
 $ sudo xcodebuild -runFirstLaunch
-```
+$ sudo xcodebuild -license
 
+# Open Xcode via Spotlight
+
+$ open -a Simulator
+```
 
 ## Other manual settings
 
