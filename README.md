@@ -79,7 +79,7 @@ $ sudo softwareupdate --install-rosetta --agree-to-license
 
 Xcode
 
-```
+```bash
 # Directory path is different depending on the version you install via xcodes.
 $ sudo xcode-select --switch /Applications/Xcode-14.3.0.app/Contents/Developer
 $ sudo xcodebuild -runFirstLaunch
@@ -88,6 +88,13 @@ $ sudo xcodebuild -license
 # Open Xcode via Spotlight
 
 $ open -a Simulator
+```
+
+Android
+
+```bash
+# Open Android Studio via Spotlight
+# Install Android SDK and so on
 ```
 
 ## Other manual settings
