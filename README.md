@@ -73,6 +73,10 @@ $ cat ~/.docker/config.json
 
 [Flutter](https://docs.flutter.dev/get-started/install/macos)
 
+- Install VSCode plugins
+    - Flutter
+    - Flutter freezed Helpers
+
 ```bash
 $ sudo softwareupdate --install-rosetta --agree-to-license
 ```
@@ -92,9 +96,13 @@ $ open -a Simulator
 
 Android
 
+- Open Android Studio via Spotlight
+- Install Android SDK and so on
+- [Enable Developer options](https://developer.android.com/studio/debug/dev-options)
+- [Install Command-Line Tools](https://developer.android.com/studio/intro/update#sdk-manager)
+
 ```bash
-# Open Android Studio via Spotlight
-# Install Android SDK and so on
+$ flutter doctor --android-licenses
 ```
 
 ## Other manual settings
