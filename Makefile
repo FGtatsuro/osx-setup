@@ -65,7 +65,8 @@ BREW_PACKAGES = \
 	google-chrome \
 	vivaldi \
 	xcodes \
-	cocoapods
+	cocoapods \
+	android-studio
 
 PIP_PACKAGES = \
 	pynvim \

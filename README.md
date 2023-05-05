@@ -73,13 +73,17 @@ $ cat ~/.docker/config.json
 
 [Flutter](https://docs.flutter.dev/get-started/install/macos)
 
+- Install VSCode plugins
+    - Flutter
+    - Flutter freezed Helpers
+
 ```bash
 $ sudo softwareupdate --install-rosetta --agree-to-license
 ```
 
 Xcode
 
-```
+```bash
 # Directory path is different depending on the version you install via xcodes.
 $ sudo xcode-select --switch /Applications/Xcode-14.3.0.app/Contents/Developer
 $ sudo xcodebuild -runFirstLaunch
@@ -88,6 +92,17 @@ $ sudo xcodebuild -license
 # Open Xcode via Spotlight
 
 $ open -a Simulator
+```
+
+Android
+
+- Open Android Studio via Spotlight
+- Install Android SDK and so on
+- [Enable Developer options](https://developer.android.com/studio/debug/dev-options)
+- [Install Command-Line Tools](https://developer.android.com/studio/intro/update#sdk-manager)
+
+```bash
+$ flutter doctor --android-licenses
 ```
 
 ## Other manual settings
