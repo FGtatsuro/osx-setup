@@ -60,6 +60,7 @@ BREW_PACKAGES = \
 	docker-credential-helper-ecr \
 	kubectx \
 	krew \
+	kind \
 	tektoncd-cli \
 	asdf \
 	google-chrome \
