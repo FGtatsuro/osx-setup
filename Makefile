@@ -84,7 +84,8 @@ GCLOUD_COMPONENTS = \
 
 KUBECTL_PLUGINS = \
 	stern \
-	view-allocations
+	view-allocations \
+	open-svc
 
 ASDF_PLUGINS = \
 	terraform \
