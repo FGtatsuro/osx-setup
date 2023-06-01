@@ -68,7 +68,8 @@ BREW_PACKAGES = \
 	xcodes \
 	cocoapods \
 	android-studio \
-	shellcheck
+	shellcheck \
+	yamlfmt
 
 PIP_PACKAGES = \
 	pynvim \
