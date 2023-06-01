@@ -69,6 +69,7 @@ BREW_PACKAGES = \
 	cocoapods \
 	android-studio \
 	shellcheck \
+	shfmt \
 	yamlfmt
 
 PIP_PACKAGES = \
