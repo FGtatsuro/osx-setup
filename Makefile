@@ -95,7 +95,8 @@ ASDF_PLUGINS = \
 	kustomize \
 	golang \
 	ruby \
-	flutter
+	flutter \
+	kubectl
 
 # NOTE: asdf CLI limitationNOTE
 # - asdf returns non-zero exit code when it tries to install already installed ones.
