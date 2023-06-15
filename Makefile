@@ -52,6 +52,7 @@ BREW_PACKAGES = \
 	mysqlworkbench \
 	authy \
 	discord \
+	zoom \
 	imagemagick \
 	skitch \
 	tunnelblick \
