@@ -59,7 +59,6 @@ BREW_PACKAGES = \
 	awsume \
 	aws-sso-util \
 	docker-credential-helper-ecr \
-	kubectx \
 	krew \
 	kind \
 	tektoncd-cli \
@@ -89,7 +88,9 @@ GCLOUD_COMPONENTS = \
 KUBECTL_PLUGINS = \
 	stern \
 	view-allocations \
-	open-svc
+	open-svc \
+	ctx \
+	ns
 
 ASDF_PLUGINS = \
 	terraform \
