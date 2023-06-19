@@ -83,7 +83,8 @@ NPM_PACKAGES = \
 	ts-node
 
 GCLOUD_COMPONENTS = \
-	gke-gcloud-auth-plugin
+	gke-gcloud-auth-plugin \
+	skaffold
 
 KUBECTL_PLUGINS = \
 	stern \
