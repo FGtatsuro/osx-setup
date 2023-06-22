@@ -29,6 +29,7 @@ BREW_PACKAGES = \
 	parallel \
 	autossh \
 	tmux \
+	colordiff \
 	reattach-to-user-namespace \
 	tree \
 	aquaskk \
