@@ -84,8 +84,7 @@ NPM_PACKAGES = \
 	ts-node
 
 GCLOUD_COMPONENTS = \
-	gke-gcloud-auth-plugin \
-	skaffold
+	gke-gcloud-auth-plugin
 
 KUBECTL_PLUGINS = \
 	stern \
@@ -100,7 +99,8 @@ ASDF_PLUGINS = \
 	golang \
 	ruby \
 	flutter \
-	kubectl
+	kubectl \
+	skaffold
 
 # NOTE: asdf CLI limitationNOTE
 # - asdf returns non-zero exit code when it tries to install already installed ones.
