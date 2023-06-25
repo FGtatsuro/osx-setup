@@ -45,6 +45,7 @@ BREW_PACKAGES = \
 	composer \
 	go \
 	gotags \
+	delve \
 	node \
 	serverless \
 	jq \
