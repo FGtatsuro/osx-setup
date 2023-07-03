@@ -78,6 +78,7 @@ PIP_PACKAGES = \
 	pynvim \
 	ipython \
 	notebook \
+	pandas \
 	sqlfluff \
 	awsume-console-plugin
 
