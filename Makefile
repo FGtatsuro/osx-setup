@@ -79,6 +79,7 @@ PIP_PACKAGES = \
 	ipython \
 	notebook \
 	pandas \
+	requests \
 	sqlfluff \
 	awsume-console-plugin
 
