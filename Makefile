@@ -72,7 +72,8 @@ BREW_PACKAGES = \
 	android-studio \
 	shellcheck \
 	shfmt \
-	yamlfmt
+	yamlfmt \
+	lefthook
 
 PIP_PACKAGES = \
 	pynvim \
