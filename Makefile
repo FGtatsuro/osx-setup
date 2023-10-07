@@ -73,7 +73,8 @@ BREW_PACKAGES = \
 	shellcheck \
 	shfmt \
 	yamlfmt \
-	lefthook
+	lefthook \
+	watch
 
 PIP_PACKAGES = \
 	pynvim \
