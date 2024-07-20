@@ -44,6 +44,13 @@ $ nvim
 :UpdateRemotePlugins
 ```
 
+Setup Copilot
+
+```vim
+$ nvim
+:Copilot setup
+```
+
 [Earthly](https://docs.earthly.dev)
 
 ```bash
