@@ -46,3 +46,7 @@ export PATH=$HOME/.krew/bin:$PATH
 
 # asdf
 source $(brew --prefix asdf)/libexec/asdf.sh
+
+# kube-ps1
+source "/opt/homebrew/share/kube-ps1.sh"
+PROMPT='$(kube_ps1)'$PROMPT

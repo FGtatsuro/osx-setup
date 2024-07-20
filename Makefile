@@ -74,7 +74,8 @@ BREW_PACKAGES = \
 	shfmt \
 	yamlfmt \
 	lefthook \
-	watch
+	watch \
+	kube-ps1
 
 PIP_PACKAGES = \
 	pynvim \
