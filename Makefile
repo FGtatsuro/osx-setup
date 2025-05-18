@@ -144,6 +144,13 @@ install: $(BREW_PREFIX)/bin/python3
 ~/.config/nvim/init.vim: ~/.config
 	cp -R home/.config/nvim ~/.config/
 
+~/.config/nvim/venv: ~/.config
+	mkdir -p ~/.config/nvim/venv
+	$(BREW_PREFIX)/bin/python3 -m venv ~/.config/nvim/venv
+	source ~/.config/nvim/venv/bin/activate
+	pip install pynvim
+	deactivate
+
 ~/.config/git/ignore: ~/.config
 	cp -R home/.config/git ~/.config/
 
