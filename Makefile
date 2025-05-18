@@ -19,6 +19,7 @@ brew-install:
 
 $(BREW_PREFIX)/bin/python3:
 	brew install python
+	brew install pipx
 
 BREW_PACKAGES = \
 	git \
@@ -56,9 +57,7 @@ BREW_PACKAGES = \
 	discord \
 	zoom \
 	imagemagick \
-	skitch \
 	tunnelblick \
-	awsume \
 	aws-sso-util \
 	docker-credential-helper-ecr \
 	krew \
@@ -75,16 +74,20 @@ BREW_PACKAGES = \
 	yamlfmt \
 	lefthook \
 	watch \
-	kube-ps1
+	kube-ps1 \
+	google-drive \
+	slack \
+	daisydisk
 
 PIP_PACKAGES = \
-	pynvim \
+	pandas \
+	requests
+
+PIP_CLI_PACKAGES = \
 	ipython \
 	notebook \
-	pandas \
-	requests \
 	sqlfluff \
-	awsume-console-plugin
+	awsume
 
 NPM_PACKAGES = \
 	ts-node
@@ -113,13 +116,15 @@ ASDF_PLUGINS = \
 # - 'asdf plugin add' doesn't support multiple plugins like 'asdf plugin add p1 p2'.
 .PHONY: install
 install: $(BREW_PREFIX)/bin/python3
-	brew tap homebrew/cask-fonts
 	./bin/wbrew "$(BREW_PACKAGES)"
-	$(BREW_PREFIX)/bin/pip3 install $(PIP_PACKAGES)
+	$(BREW_PREFIX)/bin/pipx install $(PIP_CLI_PACKAGES)
+	$(BREW_PREFIX)/bin/pipx inject awsume awsume-console-plugin
+	$(BREW_PREFIX)/bin/pipx inject ipython $(PIP_PACKAGES)
+	$(BREW_PREFIX)/bin/pipx inject notebook $(PIP_PACKAGES)
 	$(BREW_PREFIX)/bin/npm install -g $(NPM_PACKAGES)
 	$(BREW_PREFIX)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gcloud components install --quiet $(GCLOUD_COMPONENTS)
 	$(BREW_PREFIX)/bin/kubectl krew install $(KUBECTL_PLUGINS)
-	for p in $(ASDF_PLUGINS); do $(BREW_PREFIX)/bin/asdf plugin add $$p || :; $(BREW_PREFIX)/bin/asdf install $$p latest && $(BREW_PREFIX)/bin/asdf global $$p latest; done
+	for p in $(ASDF_PLUGINS); do $(BREW_PREFIX)/bin/asdf plugin add $$p || :; $(BREW_PREFIX)/bin/asdf install $$p latest && $(BREW_PREFIX)/bin/asdf set -u $$p latest; done
 	xcodes install --latest
 
 ~/.gitconfig:
