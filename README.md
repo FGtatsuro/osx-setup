@@ -146,3 +146,5 @@ Following manual settings are needed after script execution.
    - Complex Modifications
       - Change spacebar to left_shift. (Post spacebar if pressed alone)
       - Ctrl+m to Enter
+- App Store
+   - Line
