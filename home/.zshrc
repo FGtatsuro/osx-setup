@@ -50,3 +50,6 @@ source $(brew --prefix asdf)/libexec/asdf.sh
 # kube-ps1
 source "/opt/homebrew/share/kube-ps1.sh"
 PROMPT='$(kube_ps1)'$PROMPT
+
+# Python
+export PATH=$PATH:$HOME/.local/bin
