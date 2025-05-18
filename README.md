@@ -131,6 +131,7 @@ Following manual settings are needed after script execution.
       - Homebrew
    - テキスト
       - フォント(Ricty Diminished Discord Regular: 16)
+      - テキストをアンチエイリアス処理
    - ウインドウ
       - ウインドウサイズ(178 x 46)
    - シェル
