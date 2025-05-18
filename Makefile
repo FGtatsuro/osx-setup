@@ -134,6 +134,7 @@ install: $(BREW_PREFIX)/bin/python3
 	git secrets --install ~/.git-templates/git-secrets
 	git config --global init.templateDir ~/.git-templates/git-secrets
 	git config --global url.git@github.com:.insteadOf https://github.com/
+	git submodule update --init --recursive
 
 ~/.tmux.conf:
 	cp home/.tmux.conf ~/.tmux.conf
