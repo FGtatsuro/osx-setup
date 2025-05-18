@@ -156,6 +156,7 @@ install: $(BREW_PREFIX)/bin/python3
 	cp -R home/.config/git ~/.config/
 
 ~/.config/karabiner/assets/complex_modifications/ctrl_m.json: ~/.config
+	mkdir -p ~/.config/karabiner/assets/complex_modifications
 	cp -R home/.config/karabiner/assets/complex_modifications/* ~/.config/karabiner/assets/complex_modifications/
 
 ~/.zshrc:

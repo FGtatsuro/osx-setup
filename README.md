@@ -139,3 +139,9 @@ Following manual settings are needed after script execution.
       - メタキーとしてOptionキーを使用
    - 詳細
       - オーディオベルの停止
+- Karabina
+   - バックグラウンドでの実行を許可
+      - システム設定 -> 一般 -> ログイン項目
+   - Complex Modifications
+      - Change spacebar to left_shift. (Post spacebar if pressed alone)
+      - Ctrl+m to Enter
