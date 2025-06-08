@@ -39,7 +39,6 @@ BREW_PACKAGES = \
 	neovim \
 	visual-studio-code \
 	awscli \
-	aws-vault \
 	session-manager-plugin \
 	google-cloud-sdk \
 	php \
@@ -50,10 +49,7 @@ BREW_PACKAGES = \
 	node \
 	serverless \
 	jq \
-	postman \
 	mysql \
-	mysqlworkbench \
-	authy \
 	discord \
 	zoom \
 	imagemagick \
@@ -62,7 +58,6 @@ BREW_PACKAGES = \
 	docker-credential-helper-ecr \
 	krew \
 	kind \
-	tektoncd-cli \
 	asdf \
 	google-chrome \
 	vivaldi \
