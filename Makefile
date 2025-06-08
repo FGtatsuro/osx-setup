@@ -2,7 +2,7 @@ BREW_PREFIX := /usr/local
 
 all: setup
 
-setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim ~/.config/git/ignore ~/.config/karabiner/assets/complex_modifications/ctrl_m.json ~/.zshrc ~/.ipython/profile_default/ipython_config.py
+setup: install ~/.gitconfig ~/.tmux.conf ~/.config/nvim/init.vim ~/.config/nvim/venv ~/.config/git/ignore ~/.config/karabiner/assets/complex_modifications/ctrl_m.json ~/.zshrc ~/.ipython/profile_default/ipython_config.py
 
 diff:
 	diff home/.zprofile ~/.zprofile -I "brew shellenv"
@@ -148,9 +148,7 @@ install: $(BREW_PREFIX)/bin/python3
 ~/.config/nvim/venv: ~/.config
 	mkdir -p ~/.config/nvim/venv
 	$(BREW_PREFIX)/bin/python3 -m venv ~/.config/nvim/venv
-	source ~/.config/nvim/venv/bin/activate
-	pip install pynvim
-	deactivate
+	~/.config/nvim/venv/bin/pip install pynvim
 
 ~/.config/git/ignore: ~/.config
 	cp -R home/.config/git ~/.config/
