@@ -28,6 +28,21 @@ alias ggr='git log --graph --date-order -C -M --pretty=format:"<%h> %ad [%an] %C
 setopt noflowcontrol
 bindkey "^s" history-incremental-search-forward
 
+alias awsume=". awsume"
+
+prompt_info() {
+  PROMPT="%~ > "
+  if [ -n "${AWSUME_PROFILE}" ]; then
+    if [ -n "`echo ${AWSUME_PROFILE} | grep -i prd`" ]; then
+      PROMPT=$'(%{\033[31m'"${AWSUME_PROFILE}"$'\33[m%})'" ${PROMPT}"
+    else
+      PROMPT="(${AWSUME_PROFILE}) ${PROMPT}"
+    fi
+  fi
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd prompt_info
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then . "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"; fi
 # The next line enables shell command completion for gcloud.

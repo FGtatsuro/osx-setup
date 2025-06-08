@@ -118,7 +118,7 @@ ASDF_PLUGINS = \
 install: $(BREW_PREFIX)/bin/python3
 	./bin/wbrew "$(BREW_PACKAGES)"
 	$(BREW_PREFIX)/bin/pipx install $(PIP_CLI_PACKAGES)
-	$(BREW_PREFIX)/bin/pipx inject awsume awsume-console-plugin
+	$(BREW_PREFIX)/bin/pipx inject awsume awsume-console-plugin setuptools
 	$(BREW_PREFIX)/bin/pipx inject ipython $(PIP_PACKAGES)
 	$(BREW_PREFIX)/bin/pipx inject notebook $(PIP_PACKAGES)
 	$(BREW_PREFIX)/bin/npm install -g $(NPM_PACKAGES)
