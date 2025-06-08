@@ -11,7 +11,7 @@ set completeopt=menuone,preview,noselect
 set list
 
 let brew_prefix = system("brew --prefix | tr -d '\n'")
-let g:python3_host_prog = brew_prefix.'/bin/python3'
+let g:python3_host_prog = $HOME.'/.config/nvim/venv/bin/python'
 " For https://github.com/FGtatsuro/github.nvim
 let &runtimepath.=','.$HOME.'/.config/nvim/bundle/github.nvim'
 
