@@ -72,7 +72,8 @@ BREW_PACKAGES = \
 	kube-ps1 \
 	google-drive \
 	slack \
-	daisydisk
+	daisydisk \
+	claude
 
 PIP_PACKAGES = \
 	pandas \
