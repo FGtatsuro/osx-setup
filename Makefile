@@ -87,7 +87,8 @@ PIP_CLI_PACKAGES = \
 	awsume
 
 NPM_PACKAGES = \
-	ts-node
+	ts-node \
+	@anthropic-ai/claude-code
 
 GCLOUD_COMPONENTS = \
 	gke-gcloud-auth-plugin
