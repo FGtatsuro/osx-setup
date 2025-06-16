@@ -1,3 +1,6 @@
 [submodule "home/.config/nvim/pack/github/start/copilot.vim"]
 	path = home/.config/nvim/pack/github/start/copilot.vim
 	url = git@github.com:github/copilot.vim.git
+[submodule "home/.config/nvim/pack/github/start/github.nvim"]
+	path = home/.config/nvim/pack/github/start/github.nvim
+	url = git@github.com:FGtatsuro/github.nvim.git
