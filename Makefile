@@ -73,7 +73,8 @@ BREW_PACKAGES = \
 	google-drive \
 	slack \
 	daisydisk \
-	claude
+	claude \
+	uv
 
 PIP_PACKAGES = \
 	pandas \
