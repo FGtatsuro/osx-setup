@@ -74,7 +74,8 @@ BREW_PACKAGES = \
 	slack \
 	daisydisk \
 	claude \
-	uv
+	uv \
+	coreutils
 
 PIP_PACKAGES = \
 	pandas \
