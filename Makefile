@@ -75,7 +75,9 @@ BREW_PACKAGES = \
 	daisydisk \
 	claude \
 	uv \
-	coreutils
+	coreutils \
+	fd \
+	ripgrep
 
 PIP_PACKAGES = \
 	pandas \
