@@ -28,6 +28,8 @@ alias ggr='git log --graph --date-order -C -M --pretty=format:"<%h> %ad [%an] %C
 setopt noflowcontrol
 bindkey "^s" history-incremental-search-forward
 
+setopt interactivecomments
+
 alias awsume=". awsume"
 
 prompt_info() {
