@@ -74,6 +74,7 @@ BREW_PACKAGES = \
 	slack \
 	daisydisk \
 	claude \
+	claude-code \
 	uv \
 	coreutils \
 	fd \
