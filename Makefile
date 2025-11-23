@@ -116,7 +116,8 @@ ASDF_PLUGINS = \
 	kubectl \
 	skaffold
 
-GEMINI_EXTENSIONS =
+GEMINI_EXTENSIONS = \
+	https://github.com/gemini-cli-extensions/nanobanana
 
 # NOTE: asdf CLI limitationNOTE
 # - asdf returns non-zero exit code when it tries to install already installed ones.
