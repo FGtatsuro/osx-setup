@@ -78,7 +78,10 @@ BREW_PACKAGES = \
 	uv \
 	coreutils \
 	fd \
-	ripgrep
+	ripgrep \
+	z3 \
+	llvm \
+	gemini-cli
 
 PIP_PACKAGES = \
 	pandas \
