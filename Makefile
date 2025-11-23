@@ -78,7 +78,10 @@ BREW_PACKAGES = \
 	uv \
 	coreutils \
 	fd \
-	ripgrep
+	ripgrep \
+	z3 \
+	llvm \
+	gemini-cli
 
 PIP_PACKAGES = \
 	pandas \
@@ -113,6 +116,9 @@ ASDF_PLUGINS = \
 	kubectl \
 	skaffold
 
+GEMINI_EXTENSIONS = \
+	https://github.com/gemini-cli-extensions/nanobanana
+
 # NOTE: asdf CLI limitationNOTE
 # - asdf returns non-zero exit code when it tries to install already installed ones.
 # - 'asdf plugin add' doesn't support multiple plugins like 'asdf plugin add p1 p2'.
@@ -127,6 +133,7 @@ install: $(BREW_PREFIX)/bin/python3
 	$(BREW_PREFIX)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gcloud components install --quiet $(GCLOUD_COMPONENTS)
 	$(BREW_PREFIX)/bin/kubectl krew install $(KUBECTL_PLUGINS)
 	for p in $(ASDF_PLUGINS); do $(BREW_PREFIX)/bin/asdf plugin add $$p || :; $(BREW_PREFIX)/bin/asdf install $$p latest && $(BREW_PREFIX)/bin/asdf set -u $$p latest; done
+	for e in $(GEMINI_EXTENSIONS); do $(BREW_PREFIX)/bin/gemini extensions install $$e; done
 	xcodes install --latest
 
 ~/.gitconfig:
