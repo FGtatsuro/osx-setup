@@ -81,7 +81,8 @@ BREW_PACKAGES = \
 	ripgrep \
 	z3 \
 	llvm \
-	gemini-cli
+	gemini-cli \
+	direnv
 
 PIP_PACKAGES = \
 	pandas \

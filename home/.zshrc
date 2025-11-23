@@ -70,3 +70,6 @@ PROMPT='$(kube_ps1)'$PROMPT
 
 # Python
 export PATH=$PATH:$HOME/.local/bin
+
+# direnv
+eval "$(direnv hook zsh)"
