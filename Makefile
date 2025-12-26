@@ -30,6 +30,7 @@ BREW_PACKAGES = \
 	parallel \
 	autossh \
 	tmux \
+	tpm \
 	colordiff \
 	reattach-to-user-namespace \
 	tree \
