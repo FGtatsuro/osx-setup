@@ -37,6 +37,8 @@ BREW_PACKAGES = \
 	aquaskk \
 	karabiner-elements \
 	font-ricty-diminished \
+	font-biz-udpgothic \
+	font-udev-gothic-nf \
 	neovim \
 	visual-studio-code \
 	awscli \
