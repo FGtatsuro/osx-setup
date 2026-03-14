@@ -24,6 +24,7 @@ alias vi="nvim"
 alias python="python3"
 alias pip="pip3"
 alias ggr='git log --graph --date-order -C -M --pretty=format:"<%h> %ad [%an] %Cgreen%d%Creset %s" --all --date=short'
+alias claude="claude --effort max"
 
 setopt noflowcontrol
 bindkey "^s" history-incremental-search-forward
