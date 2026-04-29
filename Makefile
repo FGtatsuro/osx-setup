@@ -76,8 +76,6 @@ BREW_PACKAGES = \
 	google-drive \
 	slack \
 	daisydisk \
-	claude \
-	claude-code \
 	uv \
 	coreutils \
 	fd \
