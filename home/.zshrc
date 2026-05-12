@@ -24,7 +24,24 @@ alias vi="nvim"
 alias python="python3"
 alias pip="pip3"
 alias ggr='git log --graph --date-order -C -M --pretty=format:"<%h> %ad [%an] %Cgreen%d%Creset %s" --all --date=short'
-alias claude="claude --effort xhigh"
+# Claude Code は credential_process 経由で ~/.aws-session/current を読む
+# 親シェルから export された AWS_* 環境変数は子プロセスに渡さず、AWS_PROFILE を優先させる
+alias claude='env -u AWS_ACCESS_KEY_ID -u AWS_SECRET_ACCESS_KEY -u AWS_SESSION_TOKEN -u AWS_SECURITY_TOKEN AWS_PROFILE=claude-aws-session claude --effort xhigh'
+
+# Claude Code 起動前に ~/.aws-session/current を更新するブートストラップ
+# (Claude Code 内の /awsume-save スキルと等価。最初に Claude Code を起動する際に必要)
+awsume-save-for-claude() {
+  if [[ $# -eq 0 ]]; then
+    echo "usage: awsume-save-for-claude <profile>" >&2
+    return 1
+  fi
+  awsume "$1" || return $?
+  mkdir -p ~/.aws-session
+  env | grep -E '^(AWS_|AWSUME_)' > ~/.aws-session/current
+  echo "AWS_SESSION_SAVED_AT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> ~/.aws-session/current
+  echo "AWSUME_PROFILE=$1" >> ~/.aws-session/current
+  echo "saved credentials for profile=$1 to ~/.aws-session/current"
+}
 
 setopt noflowcontrol
 bindkey "^s" history-incremental-search-forward
